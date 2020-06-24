@@ -1,5 +1,8 @@
 package com.example.android.quakereport;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Earthquake {
     /** Magnitude of the earthquake */
     private String mMagnitude;
@@ -20,7 +23,7 @@ public class Earthquake {
     public Earthquake(String magnitude, String location, String date) {
         mMagnitude = magnitude;
         mLocation = location;
-        mDate = date;
+        mDate = formatDate(date);
     }
 
     /**
@@ -41,5 +44,21 @@ public class Earthquake {
      * Get the the date of the earthquake.
      */
     public String getDate() { return mDate; }
+
+    /**
+     * Convert date to "MMM DD, yyyy".
+     *
+     * @param date time in milliseconds.
+     *
+     * @return date in the correct format to display.
+     */
+    private String formatDate(String date) {
+        long timeInMilliseconds = Long.parseLong(date);
+        Date dateObject = new Date(timeInMilliseconds);
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM DD, yyyy");
+        String dateToDisplay = dateFormatter.format(dateObject);
+
+        return dateToDisplay;
+    }
 
 }
