@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Earthquake {
     /** Magnitude of the earthquake */
-    private String mMagnitude;
+    private double mMagnitude;
 
     /** Location of the earthquake */
     private String mLocation;
@@ -20,7 +20,7 @@ public class Earthquake {
      * @param location is the location of the earthquake.
      * @param timeInMilliseconds is the date of the earthquake.
      */
-    public Earthquake(String magnitude, String location, long timeInMilliseconds) {
+    public Earthquake(double magnitude, String location, long timeInMilliseconds) {
         mMagnitude = magnitude;
         mLocation = location;
         mTimeInMilliseconds = timeInMilliseconds;
@@ -29,7 +29,7 @@ public class Earthquake {
     /**
      * Get the magnitude of the earthquake.
      */
-    public String getMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
