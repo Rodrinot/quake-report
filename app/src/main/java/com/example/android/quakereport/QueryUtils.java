@@ -63,7 +63,7 @@ public final class QueryUtils {
                 // 6. Get the magnitude, location and time.
                 String magnitude = properties.getString("mag");
                 String location = properties.getString("place");
-                String time = properties.getString("time");
+                long time = properties.getLong("time");
 
                 // 7. Create a Earthquake object using the data.
                 Earthquake earthquake = new Earthquake(magnitude, location, time);

@@ -26,4 +26,11 @@
         android:layout_weight="1"
         android:text="Jun 20, 2020" />
 
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="10:10 PM" />
+
 </LinearLayout>
